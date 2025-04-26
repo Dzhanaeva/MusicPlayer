@@ -11,7 +11,8 @@ import SwiftUI
 struct MusicPlayerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let _ = print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path())
+            PlayerView()
         }
     }
 }
